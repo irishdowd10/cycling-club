@@ -1,3 +1,14 @@
-<p>
-  edit-profile works!
-</p>
+<h4>Edit Member</h4>
+
+<label>New Member Name:</label>
+<input [(ngModel)]="selectedProfile.name">
+<br>
+
+<label>New Member Speciality:</label>
+<input [(ngModel)]="selectedProfile.speciality">
+<br>
+
+<label>New Member Email:</label>
+<input [(ngModel)]="selectedProfile.email">
+
+<button (click)="beginUpdatingProfile(selectedProfile)">Update</button>

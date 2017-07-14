@@ -20,11 +20,13 @@ export class ProfileService {
 
   getProfileById(profileId: string){
     return this.database.object('profiles/' + profileId);
-  // for (var i = 0; i <= PROFILES.length - 1; i++) {
-  //   if (PROFILES[i].id === profileId) {
-  //     return PROFILES[i];
-  //   }
-  // }
 }
+updateProfile(localUpdatedProfile){
+  var profileEntryInFirebase = this.getProfileById(localUpdatedProfile.$key);
+  profileEntryInFirebase.update({name: localUpdatedProfile.name,
+                              speciality: localUpdatedProfile.speciality,
+                              email: localUpdatedProfile.email});
+}
+
 
 }
