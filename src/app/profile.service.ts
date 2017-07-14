@@ -21,12 +21,16 @@ export class ProfileService {
   getProfileById(profileId: string){
     return this.database.object('profiles/' + profileId);
 }
-updateProfile(localUpdatedProfile){
-  var profileEntryInFirebase = this.getProfileById(localUpdatedProfile.$key);
-  profileEntryInFirebase.update({name: localUpdatedProfile.name,
-                              speciality: localUpdatedProfile.speciality,
-                              email: localUpdatedProfile.email});
+
+  updateProfile(localUpdatedProfile){
+    var profileEntryInFirebase = this.getProfileById(localUpdatedProfile.$key);
+    profileEntryInFirebase.update({name: localUpdatedProfile.name,speciality: localUpdatedProfile.speciality,
+    email: localUpdatedProfile.email});
 }
 
+  deleteProfile(localProfileToDelete){
+  var profileEntryInFirebase = this.getProfileById(localProfileToDelete.$key);
+  profileEntryInFirebase.remove();
+}
 
 }
