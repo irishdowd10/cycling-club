@@ -9,10 +9,14 @@ import { Profile  } from '../profile.model';
   styleUrls: ['./profile-detail.component.css']
 })
 export class ProfileDetailComponent implements OnInit {
+  profileId:  number = null;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private location: Location) { }
 
   ngOnInit() {
+    this.route.params.forEach((urlParameters) => {
+      this.profileId = parseInt(urlParameters['id']);
+    });
   }
 
 }
