@@ -1,0 +1,17 @@
+{ "profiles": [{
+    "name": "Eddy Merckx",
+    "speciality": "Road",
+    "email": "eddy@gmail.com",
+    "id": "1"
+    }, {
+    "name": "Hans Rey",
+    "speciality": "Mountain",
+    "email": "hans@gmail.com",
+    "id": "2"
+      }, {
+    "name": "Eric De Vlaeminck",
+    "speciality": "Cyclocross",
+    "email": "eric@gmail.com",
+    "id": "3"
+  }]
+}

@@ -1,5 +1,5 @@
 <div>
-  <h3>{{profileToDisplay.name}}</h3>
-  <h4>{{profileToDisplay.speciality}}</h4>
-  <p>{{profileToDisplay.email}}</p>
+  <h3>{{ (profileToDisplay | async)?.name }}</h3>
+  <h4>{{ (profileToDisplay | async)?.speciality }}</h4>
+  <p>{{ (profileToDisplay | async)?.email }}</p>
 </div>

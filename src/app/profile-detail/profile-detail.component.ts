@@ -12,8 +12,8 @@ import { ProfileService } from '../profile.service';
 })
 
 export class ProfileDetailComponent implements OnInit {
-  profileId:  number;
-  profileToDisplay: Profile;
+  profileId:  string;
+  profileToDisplay;
 
   constructor(
     private route: ActivatedRoute,
@@ -23,8 +23,9 @@ export class ProfileDetailComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
-      this.profileId = parseInt(urlParameters['id']);
+      this.profileId = urlParameters['id'];
     });
+
     this.profileToDisplay = this.profileService.getProfileById(this.profileId);
   }
 
