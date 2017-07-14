@@ -1,24 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { Profile }  from '../profile.model';
 import { Router } from '@angular/router';
+import { ProfileService } from '../profile.service';
 
 @Component({
   selector: 'app-members',
   templateUrl: './members.component.html',
-  styleUrls: ['./members.component.css']
+  styleUrls: ['./members.component.css'],
+  providers:  [ProfileService]
 })
 
 export class MembersComponent implements OnInit {
+  profiles: Profile[];
 
-  constructor(private router: Router){}
-
-  profiles: Profile[] = [
-    new Profile("Eddy Merckx", "Road","eddy@gmail.com",1),
-    new Profile("Hans Rey", "Mountain","hans@gmail.com",2),
-    new Profile("Eric De Vlaeminck", "Cyclocross","eddy@gmail.com",3)
-  ];
+  constructor(private router: Router, private profileService: ProfileService){}
 
   ngOnInit() {
+    this.profiles = this.profileService.getProfiles();
   }
 
   goToDetailPage(clickedProfile: Profile) {
