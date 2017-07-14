@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { AboutComponent } from './about/about.component';
 import { MembersComponent } from './members/members.component';
-
+import { ProfileDetailComponent } from './profile-detail/profile-detail.component';
 
 
 const appRoutes: Routes = [
@@ -14,11 +14,15 @@ const appRoutes: Routes = [
   {
   path: 'about',
   component: AboutComponent
-},
-{
-path: 'members',
-component: MembersComponent
-}
+  },
+  {
+  path: 'members',
+  component: MembersComponent
+  },
+  {
+  path: 'profiles/:id',
+  component: ProfileDetailComponent
+  }
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
