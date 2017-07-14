@@ -3,5 +3,10 @@
 <div *ngFor="let profile of profiles | async" (click)="goToDetailPage(profile)" class="panel panel-default">
   <div class="panel-body">
     <h3><em>{{profile.name}}</em> Speciality: {{profile.speciality}}</h3>
+    <div *ngIf="currentRoute === '/admin'">
+      {{profile.email}}
+      <hr>
+      <app-edit-profile></app-edit-profile>
+    </div>
   </div>
 </div>
