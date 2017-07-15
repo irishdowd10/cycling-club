@@ -16,7 +16,7 @@ export class EditProfileComponent implements OnInit {
   }
 
   beginUpdatingProfile(profileToUpdate){
-  this.profileService.updateProfile(profileToUpdate);
+    this.profileService.updateProfile(profileToUpdate);
 }
 
 beginDeletingProfile(profileToDelete){

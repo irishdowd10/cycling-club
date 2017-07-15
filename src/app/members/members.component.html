@@ -2,7 +2,7 @@
 
 <div *ngFor="let profile of profiles | async" class="panel panel-default">
   <div class="panel-body">
-    <h3><em>{{profile.name}}</em> Speciality: {{profile.speciality}}</h3>
+    <h3 (click)="goToDetailPage(profile)"><em>{{profile.name}}</em> Speciality {{profile.speciality}}</h3>
     <div *ngIf="currentRoute === '/admin'">
       {{profile.email}}
       <hr>
