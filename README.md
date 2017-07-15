@@ -1,28 +1,53 @@
-# CyclingClub
+# Cycling Club
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+#### 07.14.17
 
-## Development server
+#### **By John Dowd**
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Description
 
-## Code scaffolding
+This is a web application that will allow club users to see who is part of the cycling club.  Profile information of each cyclist: name, speciality(road,cyclocross and mountain) and email.  The admin feature of the app will allow the administrator to create, edit or delete members.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+|Behavior| Input (User Action/Selection) |Output|
+|---|:---:|:---:|
+|View Members |"All Members"| Eddy Merckx","Road" "eddy@gmail.com"|
+|Admin able to Delete a  Member  | "Eddy Merckx"| "Deleted" |
+|About Page  | Information about the club| "Displays club info" |
 
-## Build
+## Setup/Installation Requirements
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+To download and run this project:
+1. Clone this repository to your desktop.
+2. Run {$ npm install} and {$ bower install} in your terminal to gather required packages.
+3. Create a account in Firbase https://firebase.google.com/
+4.  Create a New Project. Select this option, provide a name for your new project, and select your Country/region    from the drop-down menu.
+5.  npm install angularfire2@4.0.0-rc.0 firebase --save
+6.  In firebase change both the ".read", and ".write" properties here to "true".
+7. Create an api key in the app folder export var masterFirebaseConfig = {
+    apiKey: "xxxx",
+    authDomain: "xxxx.firebaseapp.com",
+    databaseURL: "https://xxxx.firebaseio.com",
+    storageBucket: "xxxx.appspot.com",
+    messagingSenderId: "xxxx"
+  };
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Support and contact details
 
-## Running end-to-end tests
+If you have any issues or have questions, ideas, concerns, or contributions please contact the contributor through Github.  Thanks!!
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+## Technologies Used
 
-## Further help
+* Javascript
+* Angular2
+* Firebase
+* TypeScript
+* JSON
+* HTML
+* CSS
+* Bootstrap
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### License
+This software is licensed under the MIT license.
+
+Copyright (c) 2017 **John Dowd**
