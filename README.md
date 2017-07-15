@@ -19,7 +19,7 @@ This is a web application that will allow club users to see who is part of the c
 To download and run this project:
 1. Clone this repository to your desktop.
 2. Run {$ npm install} and {$ bower install} in your terminal to gather required packages.
-3. Create a account in Firbase https://firebase.google.com/
+3. Create a account in Firebase https://firebase.google.com/
 4.  Create a New Project. Select this option, provide a name for your new project, and select your Country/region    from the drop-down menu.
 5.  npm install angularfire2@4.0.0-rc.0 firebase --save
 6.  In firebase change both the ".read", and ".write" properties here to "true".
